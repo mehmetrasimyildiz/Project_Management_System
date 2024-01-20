@@ -1,0 +1,40 @@
+{% extends 'accounts/base.html' %}
+{% load crispy_forms_filters %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+    Login
+{% endblock %}
+{% block body %}
+
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="display-3 text-center">Login</h1>
+
+                    <!-- Login form -->
+                    <form action="{% url 'login' %}" method="post" novalidate>
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                        <div class="d-grid my-4 ">
+                            <button class="btn btn-outline-danger btn-lg" type="submit"><i class="fas fa-sign-in-alt"></i> Login</button>
+                        </div>
+                    </form>
+
+
+                     <!-- Register link -->
+                    <div class="text-center">
+                        <p class="small fw-bold my-3 pt-1 mb-0">
+                            <a href="{% url 'register' %}" class="link-danger">Register</a>
+                        </p>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+

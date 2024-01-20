@@ -1,0 +1,26 @@
+{% extends 'accounts/base.html' %}
+{% load static %}
+
+{% block title %}
+    Index Page
+{% endblock %}
+
+{% block body %}
+
+    <section class="container p-5 shadow my-5 bg-body rounded">
+        <div class="row align-items-center">
+            <div class="col-lg-7">
+                <h1 class="display-3 text-sm-start text-center">Hello, {{ user.username }}!</h1>
+                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Aperiam consectetur earum eum nulla, quae soluta.
+                    A consequatur cupiditate distinctio dolore facilis fugit, illum porro possimus,
+                    sapiente soluta totam voluptate voluptatibus. </p>
+                <a class="btn btn-primary btn-lg" href="#" role="button">Do not click me!</a>
+            </div>
+            <div class="col-lg-5">
+                <img src="{% static 'images/undraw_security_o890.png' %}" alt="security_guard" class="img-fluid">
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

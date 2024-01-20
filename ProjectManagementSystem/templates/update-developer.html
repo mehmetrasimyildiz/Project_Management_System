@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load crispy_forms_filters %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+    Add Developer
+{% endblock %}
+{% block body %}
+
+<!DOCTYPE html>
+<html lang="en">
+<div class="row justify-content-center">
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="display-3 text-center">Update Developer</h1>
+<form action="" method="post"  >
+    {% csrf_token %}
+      {{ form.as_div }}
+        <input type="submit" value="Update Developer">
+    
+</form>
+<a href="{% url 'index' %}">Home Page</a>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+</html>
